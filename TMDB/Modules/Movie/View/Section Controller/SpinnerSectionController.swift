@@ -1,6 +1,6 @@
 //
 //  SpinnerSectionController.swift
-//  eckish
+//  TMDB
 //
 //  Created by Fariba on 12/10/1396 AP.
 //  Copyright © 1396 AP Fariba. All rights reserved.

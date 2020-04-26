@@ -1,6 +1,6 @@
 //
 //  Utility.swift
-//  Zabanshenas
+//  TMDB
 //
 //  Created by Fariba Heidari on 10/4/1398 AP.
 //  Copyright © 1398 AP Fariba. All rights reserved.
