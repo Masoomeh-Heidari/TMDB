@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Popular Movies View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="PopularMoviesViewController" id="BYZ-38-t0r" customClass="PopularMoviesViewController" customModule="TMDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="110"/>
+        </scene>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="TaN-df-szN">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailViewController" id="jsQ-sY-0bY" customClass="MovieDetailViewController" customModule="TMDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5wf-kh-p2V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S0j-WK-djf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="287"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="287" id="KmC-rI-SYa"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whP-JI-bxB">
+                                <rect key="frame" x="20" y="295" width="374" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="KPq-EB-APW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="S0j-WK-djf" firstAttribute="leading" secondItem="kDB-dI-JZL" secondAttribute="leading" id="HPn-QP-XzZ"/>
+                            <constraint firstItem="whP-JI-bxB" firstAttribute="top" secondItem="S0j-WK-djf" secondAttribute="bottom" constant="8" id="IpC-JS-rHF"/>
+                            <constraint firstItem="whP-JI-bxB" firstAttribute="leading" secondItem="kDB-dI-JZL" secondAttribute="leading" constant="20" id="KTe-L7-faf"/>
+                            <constraint firstItem="kDB-dI-JZL" firstAttribute="trailing" secondItem="whP-JI-bxB" secondAttribute="trailing" constant="20" id="KVd-BP-rjs"/>
+                            <constraint firstItem="S0j-WK-djf" firstAttribute="trailing" secondItem="kDB-dI-JZL" secondAttribute="trailing" id="Ma1-66-baX"/>
+                            <constraint firstItem="S0j-WK-djf" firstAttribute="top" secondItem="5wf-kh-p2V" secondAttribute="top" id="nSz-sf-6li"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kDB-dI-JZL"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="S0j-WK-djf" id="f2T-eI-tq6"/>
+                        <outlet property="titleLabel" destination="whP-JI-bxB" id="IaJ-aU-dEy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DWd-mh-aEe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.85507246376824" y="87.723214285714278"/>
+        </scene>
+        <!--Date Picker View Controller-->
+        <scene sceneID="WnP-Xn-hSu">
+            <objects>
+                <viewController storyboardIdentifier="DatePickerViewController" modalPresentationStyle="overCurrentContext" id="Hd7-Hb-R0D" customClass="DatePickerViewController" customModule="TMDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oBC-qU-9P5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBE-ob-dLY">
+                                <rect key="frame" x="0.0" y="20" width="414" height="876"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hZP-l5-pUb">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="876"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="khE-KE-TJ6">
+                                <rect key="frame" x="40" y="247" width="334" height="412"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="412" id="Ko9-qa-goj"/>
+                                    <constraint firstAttribute="width" constant="334" id="oYG-ca-c6k"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="getDatePickerSelectedValue:" destination="Hd7-Hb-R0D" eventType="valueChanged" id="IYn-YE-Abi"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkp-0u-XAc">
+                                <rect key="frame" x="159" y="680" width="96" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="ECC-Qy-a8E"/>
+                                    <constraint firstAttribute="height" constant="50" id="jTv-cr-YqT"/>
+                                </constraints>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="Hd7-Hb-R0D" eventType="touchUpInside" id="MdG-t4-iKf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jkp-0u-XAc" firstAttribute="top" secondItem="khE-KE-TJ6" secondAttribute="bottom" constant="21" id="8Q1-Aq-kZD"/>
+                            <constraint firstItem="Jkp-0u-XAc" firstAttribute="centerX" secondItem="FzO-Ca-TKA" secondAttribute="centerX" id="IIh-vZ-34h"/>
+                            <constraint firstItem="cBE-ob-dLY" firstAttribute="trailing" secondItem="FzO-Ca-TKA" secondAttribute="trailing" id="NvM-tg-8Ft"/>
+                            <constraint firstItem="khE-KE-TJ6" firstAttribute="centerX" secondItem="FzO-Ca-TKA" secondAttribute="centerX" id="WF0-ay-xvo"/>
+                            <constraint firstAttribute="bottom" secondItem="cBE-ob-dLY" secondAttribute="bottom" id="gL7-i9-7Al"/>
+                            <constraint firstItem="cBE-ob-dLY" firstAttribute="top" secondItem="oBC-qU-9P5" secondAttribute="top" constant="20" symbolic="YES" id="hcR-q5-rQn"/>
+                            <constraint firstItem="cBE-ob-dLY" firstAttribute="leading" secondItem="FzO-Ca-TKA" secondAttribute="leading" id="pKe-8n-5Pr"/>
+                            <constraint firstItem="khE-KE-TJ6" firstAttribute="centerY" secondItem="FzO-Ca-TKA" secondAttribute="centerY" id="xT6-KS-0cS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FzO-Ca-TKA"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="khE-KE-TJ6" id="CJG-tO-lws"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qk6-Sb-E2y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1792.753623188406" y="79.6875"/>
+        </scene>
+    </scenes>
+</document>
